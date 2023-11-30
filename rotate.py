@@ -49,7 +49,7 @@ def get_coordbase_parallel_ra_dec(ra, dec):
     # ra, dec to theta, phi in spherical coordinates
     phi1 = np.deg2rad(90-dec)
     # phi = np.deg2rad(ra)
-    phi2 = np.deg2rad(ra)
+    phi2 = np.deg2rad(ra + 90)
 
     cos_phi1 = np.cos(phi1)
     sin_phi1 = np.sin(phi1)
