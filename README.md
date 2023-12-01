@@ -1,9 +1,11 @@
 
 # Projected ellipticity
 
-test.ipynb: 
-    derivation and an excample in 2D rotation
+## Derivation and an excample in 2D rotation
++ test.ipynb
 
-generate_lens_catalog.py:
-    generate a lens catalog with projected ellipticity in Abacus simulation
+## Generate a lens catalog with projected ellipticity in Abacus simulation
+
++ collect_data.py
++ generate_lens_catalog.py
 

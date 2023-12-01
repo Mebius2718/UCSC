@@ -35,7 +35,7 @@ def get_coordbase_parallel_ra_dec(ra, dec):
     """
     Finds the coordinate basis from eigenvectors.
     
-    A very strightforward diagrame: https://arxiv.org/pdf/2309.08605 Sect.2.3
+    A very strightforward diagram: https://arxiv.org/pdf/2309.08605 Sect.2.3
 
     ra: rad
         Right ascension of the galaxy
@@ -47,9 +47,9 @@ def get_coordbase_parallel_ra_dec(ra, dec):
     """
 
     # ra, dec to theta, phi in spherical coordinates
-    phi1 = np.deg2rad(90-dec)
-    # phi = np.deg2rad(ra)
-    phi2 = np.deg2rad(ra + 90)
+    phi1 = np.deg2rad(90 - dec)
+    phi2 = np.deg2rad(ra)
+    # phi2 = np.deg2rad(90 + ra)
 
     cos_phi1 = np.cos(phi1)
     sin_phi1 = np.sin(phi1)
@@ -60,8 +60,8 @@ def get_coordbase_parallel_ra_dec(ra, dec):
     vec_phi2 = np.array([-sin_phi2, cos_phi2, 0])
     vec_n = -np.array([sin_phi1*cos_phi2, sin_phi1*sin_phi2, cos_phi1])
 
-    x1 = vec_phi2
-    x2 = -vec_phi1
+    x1 = vec_phi1
+    x2 = vec_phi2
     x3 = -vec_n
 
     coordbase = np.array([x1, x2, x3]).T
